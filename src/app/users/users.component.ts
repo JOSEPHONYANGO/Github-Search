@@ -16,7 +16,7 @@ export class UsersComponent implements OnInit {
     this.userService.getUsers().subscribe(
       data =>{
         this.users=data
-        console.log(this.users)
+        
 
       }
       
