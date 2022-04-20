@@ -11,8 +11,18 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers():Observable<ApiInterface>{
-    return this.http.get<ApiInterface>(this.BASE_URL + 'users')
+  getUsers():Observable<ApiInterface[]>{
+    return this.http.get<ApiInterface[]>(this.BASE_URL + '/users')
 
   }
+  getUserById(){
+
+  }
+  getPosts():Observable<any>{
+    return this.http.get<any>(`${this.BASE_URL}/`)
+
+  }
+
 }
+
+
