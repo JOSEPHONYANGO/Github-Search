@@ -7,7 +7,7 @@ import * as process from 'process';
 
 @Injectable()
 export class SearchGithubService {
-  user:User; // We'll need the User blueprint class for Creating a new User Instance
+    user:User; // We'll need the User blueprint class for Creating a new User Instance
 	repository:Repository; // // We'll need the Repository blueprint class for Creating a new Repository Instance
 	repoData = []; // Created an Empty Multi-Dimensional Array that we'll User for Every Repository Instance we get from a given Username
 	newUserData :any = []; // This Array Holds the Property for Every Array we Push to the repoData Array
