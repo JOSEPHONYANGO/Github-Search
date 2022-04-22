@@ -10,13 +10,16 @@ import { User } from '../user';
 })
 export class GitSearchResultsComponent implements OnInit {
 
-    user:User; 
+    user:any; 
     repoDetails = []; // Property we'll use in our git-search-results.component.html to render the Repository instances
-    searchGithubService:SearchGithubService; // Declare the searchGithubService which is of type SearchGithubService we imported from src/app/search-github.service  
+    // searchGithubService:SearchGithubService; // Declare the searchGithubService which is of type SearchGithubService we imported from src/app/search-github.service  
     hideInput:boolean;
 
-  constructor(searchGithubService:SearchGithubService) { 
-    this.searchGithubService = searchGithubService;
+  // constructor(searchGithubService:SearchGithubService) { 
+  //   this.searchGithubService = searchGithubService;
+  // }
+
+  constructor(private searchGithubService:SearchGithubService){
   }
 
   @Output() toggleBack = new EventEmitter();
@@ -26,9 +29,14 @@ export class GitSearchResultsComponent implements OnInit {
     this.toggleBack.emit(this.hideInput);
   }
 
-  ngOnInit(){
-    this.user = this.searchGithubService.user;
-    this.repoDetails = this.searchGithubService.repoData;
+  async ngOnInit(){
+    // this.user = this.searchGithubService.user;
+    // this.repoDetails = this.searchGithubService.repoData;
+    this.searchGithubService.searchUserEvent.subscribe((res)=>{
+      if(res.status){
+        this.user=res.data
+      }
+    })
   }
 
 }

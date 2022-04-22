@@ -11,16 +11,24 @@ import { User } from '../user';
   styleUrls: ['./git-form.component.css']
 })
 export class GitFormComponent implements OnInit {
-  user:User;
+  // user:User;
+  user:any;
 	username:string; 
-	searchGithubService:SearchGithubService;  
+	// searchGithubService:SearchGithubService;  
   public showInput = true; 
   public showData = false; 
 
-  submitUsername() {
-		this.searchGithubService.getUserData(this.username); // Passing the username entered as an arguement to getUserData function in our service then fed to the API for a response if the user exists
-    this.showInput = false;
-    this.showData = true;
+  async submitUsername(){
+    try{
+      console.log(this.username)
+      let res=await this.searchGithubService.getUserData(this.username); // Passing the username entered as an arguement to getUserData function in our service then fed to the API for a response if the user exists
+      this.user=res
+      console.log(res)
+    }catch(e){
+      console.log(e)
+    }
+    // this.showInput = false;
+    // this.showData = true;
 	}
   showUserInput(hideInput) {
     this.showInput = hideInput;
@@ -28,8 +36,8 @@ export class GitFormComponent implements OnInit {
   }
   
 
-  constructor(searchGithubService:SearchGithubService) { 
-    searchGithubService:SearchGithubService
+  constructor(private searchGithubService:SearchGithubService) { 
+    // searchGithubService:SearchGithubService
   }
 
   ngOnInit() {
