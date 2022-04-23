@@ -1,18 +1,19 @@
-# GitSearch
+# Version 1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+This project develops an application that allows the user to search github users for their projects, history and bios.
 
-## Development server
+## By Joseph Otieno
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project develops an application that allows the user to search github users for their projects, history and bios.`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Have access to the right browser.
+Select the live link to make orders from the website.
 
 ## Running unit tests
 
@@ -24,4 +25,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Contact talantadigitalke@gmail.com.
