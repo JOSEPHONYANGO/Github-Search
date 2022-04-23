@@ -2,7 +2,7 @@
 
 This project develops an application that allows the user to search github users for their projects, history and bios.
 
-## By Joseph Otieno
+## By Joseph Onyango
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
